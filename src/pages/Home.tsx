@@ -8,7 +8,7 @@ export const Home = () => {
   const { data: backEndData } = useFetch(getBackEndData);
 
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="h-[calc(100vh-7.5rem)] flex flex-col">
       <div className="container mx-auto mt-10 px-2 sm:px-0">
         <p className="text-center sm:text-left">{siteDescription}</p>
       </div>
