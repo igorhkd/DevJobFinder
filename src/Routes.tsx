@@ -1,0 +1,14 @@
+import { Route, Routes } from "react-router-dom";
+import { Home } from "./pages/Home";
+import { FrontEndPage } from "./pages/FrontEndPage";
+import { BackEndPage } from "./pages/BackEndPage";
+
+export const AppRoutes = () => {
+  return (
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/frontend" element={<FrontEndPage />} />
+      <Route path="/backend" element={<BackEndPage />} />
+    </Routes>
+  );
+};

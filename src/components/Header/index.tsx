@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 type HeaderProps = {
   title?: string;
 };
@@ -5,10 +7,10 @@ type HeaderProps = {
 export const Header = ({ title = "" }: HeaderProps) => {
   return (
     <header className="bg-gray-100 py-4">
-      <div className="container mx-auto">
-        <h1 className="text-xl font-semibold text-gray-800 text-center sm:text-left">
+      <div className="container mx-auto text-center sm:text-left">
+        <Link to="/" className="text-xl font-semibold text-secondary">
           {title}
-        </h1>
+        </Link>
       </div>
     </header>
   );
