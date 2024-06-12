@@ -15,6 +15,7 @@ export const BackEndPage = () => {
           title={issue.title}
           badges={issue.labels}
           subtitle={formatDate(issue.created_at)}
+          linkUrl={`/backend/${issue.number}`}
         />
       ))}
     </VacanciesPage>

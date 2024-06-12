@@ -1,6 +1,9 @@
+import { Link } from "react-router-dom";
+
 type MiniCardProps = {
   title?: string;
   subtitle?: string;
+  linkUrl?: string;
   badges?: {
     id: number;
     name: string;
@@ -12,9 +15,13 @@ export const MiniCard = ({
   title = "",
   subtitle = "",
   badges,
+  linkUrl,
 }: MiniCardProps) => {
   return (
-    <div className="w-full min-h-28 bg-primary p-4 rounded-lg hover:opacity-70 duration-150 cursor-pointer">
+    <Link
+      to={linkUrl!}
+      className="w-full min-h-28 bg-primary p-4 rounded-lg hover:opacity-70 duration-150 cursor-pointer"
+    >
       <div className="flex flex-col justify-between h-full">
         <div>
           <p className="font-semibold text-lg">{title}</p>
@@ -36,6 +43,6 @@ export const MiniCard = ({
           </div>
         )}
       </div>
-    </div>
+    </Link>
   );
 };
