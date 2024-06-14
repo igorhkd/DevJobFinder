@@ -17,13 +17,13 @@ export const Home = () => {
           imageUrl={frontEndData?.organization.avatar_url}
           title={frontEndData?.organization.login}
           description={frontEndData?.description}
-          redirectUrl="/frontend"
+          redirectUrl="/frontendbr"
         />
         <Card
           imageUrl={backEndData?.organization.avatar_url}
           title={backEndData?.organization.login}
           description={backEndData?.description}
-          redirectUrl="/backend"
+          redirectUrl="/backend-br"
         />
       </div>
     </div>

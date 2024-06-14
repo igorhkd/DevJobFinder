@@ -15,35 +15,20 @@ type IssuesData = {
   }[];
 };
 
-export const getFrontEndIssues = async (): Promise<IssuesData[]> => {
+export const getIssues = async (url: string): Promise<IssuesData[]> => {
   const response: AxiosResponse<IssuesData[]> = await api.get(
-    "frontendbr/vagas/issues"
+    `${url}/vagas/issues`
   );
 
   return response.data;
 };
 
-export const getFrontEndIssuesById = async (
+export const getIssuesById = async (
+  url: string,
   id: string
 ): Promise<IssuesData> => {
   const response: AxiosResponse<IssuesData> = await api.get(
-    `frontendbr/vagas/issues/${id}`
-  );
-
-  return response.data;
-};
-
-export const getBackEndIssues = async (): Promise<IssuesData[]> => {
-  const response: AxiosResponse<IssuesData[]> = await api.get(
-    "backend-br/vagas/issues"
-  );
-
-  return response.data;
-};
-
-export const getBackEndIssuesById = async (id: string): Promise<IssuesData> => {
-  const response: AxiosResponse<IssuesData> = await api.get(
-    `backend-br/vagas/issues/${id}`
+    `${url}/vagas/issues/${id}`
   );
 
   return response.data;
