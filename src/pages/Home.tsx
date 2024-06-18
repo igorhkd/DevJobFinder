@@ -1,11 +1,14 @@
 import { Card } from "../components/Card";
-import { useFetch } from "../hooks/useFetch";
 import { siteDescription } from "../config";
-import { getBackEndData, getFrontEndData } from "../service/repositoryData";
+import { useFetchMultiple } from "../service/repositoryData/hooks/useFetchMultiple";
+
+const repositoryUrls = ["frontendbr", "backend-br"];
 
 export const Home = () => {
-  const { data: frontEndData } = useFetch(getFrontEndData);
-  const { data: backEndData } = useFetch(getBackEndData);
+  const { data, error, loading } = useFetchMultiple(repositoryUrls);
+
+  if (loading) return <p>Loading...</p>;
+  if (error) return <p>Error: {error.message}</p>;
 
   return (
     <div className="sm:h-[calc(100vh-7.5rem)] flex flex-col">
@@ -13,18 +16,15 @@ export const Home = () => {
         <p className="text-center sm:text-left">{siteDescription}</p>
       </div>
       <div className="container mx-auto flex flex-col items-center gap-10 mt-10 mb-5 px-2 sm:flex-row sm:px-0">
-        <Card
-          imageUrl={frontEndData?.organization.avatar_url}
-          title={frontEndData?.organization.login}
-          description={frontEndData?.description}
-          redirectUrl="/frontendbr"
-        />
-        <Card
-          imageUrl={backEndData?.organization.avatar_url}
-          title={backEndData?.organization.login}
-          description={backEndData?.description}
-          redirectUrl="/backend-br"
-        />
+        {data.map((item) => (
+          <Card
+            key={item.id}
+            imageUrl={item.organization.avatar_url}
+            title={item.organization.login}
+            description={item.description}
+            redirectUrl={`${item.organization.login}`}
+          />
+        ))}
       </div>
     </div>
   );
