@@ -22,7 +22,7 @@ export const DetailsPage = () => {
   return (
     <div className="p-8 min-h-screen sm:container mx-auto sm:p-0 sm:my-8">
       <div className="mb-2">
-        <LinkButton href={`/${path}`}>
+        <LinkButton to={`/${path}`}>
           <IoArrowBack />
           Voltar
         </LinkButton>

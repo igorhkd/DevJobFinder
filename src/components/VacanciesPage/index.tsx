@@ -11,7 +11,7 @@ export const VacanciesPage = ({ children, pageTitle }: VacanciesPageProps) => {
   return (
     <div className="min-h-screen flex flex-col">
       <div className="container mx-auto flex flex-col mt-10 mb-4 gap-2 px-2 sm:px-0">
-        <LinkButton>
+        <LinkButton to="/">
           <IoArrowBack />
           Voltar
         </LinkButton>
