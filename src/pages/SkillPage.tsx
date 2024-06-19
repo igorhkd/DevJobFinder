@@ -5,6 +5,7 @@ import { useFetch } from "../hooks/useFetch";
 import { getIssues } from "../service/issuesData";
 import { formatDate } from "../utils";
 import { useCallback } from "react";
+import { Loading } from "../components/Loading";
 
 type SkillPageProps = {
   title?: string;
@@ -15,7 +16,9 @@ export const SKillPage = ({ title = "", linkUrl }: SkillPageProps) => {
   const location = useLocation();
   const { pathname } = location;
   const fetchFunction = useCallback(() => getIssues(pathname), [pathname]);
-  const { data: issues } = useFetch(fetchFunction);
+  const { data: issues, isLoading } = useFetch(fetchFunction);
+
+  if (isLoading) return <Loading />;
 
   return (
     <VacanciesPage pageTitle={title}>

@@ -16,10 +16,12 @@ export const Card = ({
   return (
     <Link
       to={redirectUrl}
-      className="max-w-xs rounded overflow-hidden shadow-lg h-80 hover:opacity-70 duration-150 cursor-pointer"
+      className="max-w-xs rounded overflow-hidden shadow-xl h-80 hover:opacity-70 duration-150 cursor-pointer flex flex-col"
     >
-      <img className="w-full h-40" src={imageUrl} alt={title} />
-      <div className="px-6 py-4">
+      <div className="flex-shrink-0">
+        <img className="w-full h-40" src={imageUrl} alt={title} />
+      </div>
+      <div className="flex-1 px-6 py-4">
         <div className="font-bold text-xl mb-2">{title}</div>
         <p className="text-secondary text-base">{description}</p>
       </div>

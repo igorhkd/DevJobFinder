@@ -9,6 +9,8 @@ export const AppRoutes = () => {
       <Route path="/" element={<Home />} />
       <Route path="frontendbr/:id" element={<DetailsPage />} />
       <Route path="/backend-br/:id" element={<DetailsPage />} />
+      <Route path="/dotnetdevbr/:id" element={<DetailsPage />} />
+      <Route path="/react-brasil/:id" element={<DetailsPage />} />
       <Route
         path="/frontendbr"
         element={<SKillPage title="Front-End" linkUrl="frontendbr" />}
@@ -16,6 +18,14 @@ export const AppRoutes = () => {
       <Route
         path="/backend-br"
         element={<SKillPage title="Back-End" linkUrl="backend-br" />}
+      />
+      <Route
+        path="/dotnetdevbr"
+        element={<SKillPage title=".NET" linkUrl="dotnetdevbr" />}
+      />
+      <Route
+        path="/react-brasil"
+        element={<SKillPage title="React" linkUrl="react-brasil" />}
       />
     </Routes>
   );

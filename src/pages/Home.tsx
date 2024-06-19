@@ -1,29 +1,32 @@
 import { Card } from "../components/Card";
+import { Loading } from "../components/Loading";
 import { siteDescription } from "../config";
 import { useFetchMultiple } from "../service/repositoryData/hooks/useFetchMultiple";
-
-const repositoryUrls = ["frontendbr", "backend-br"];
+import { repositoryUrls } from "./constants";
 
 export const Home = () => {
-  const { data, error, loading } = useFetchMultiple(repositoryUrls);
+  const { data, loading } = useFetchMultiple(repositoryUrls);
 
-  if (loading) return <p>Loading...</p>;
-  if (error) return <p>Error: {error.message}</p>;
+  if (loading) return <Loading />;
 
   return (
-    <div className="sm:h-[calc(100vh-7.5rem)] flex flex-col">
-      <div className="container mx-auto mt-10 px-2 sm:px-0">
+    <div className="min-h-[calc(100vh-7.5rem)] flex flex-col">
+      <div className="container mx-auto mt-10 px-4 sm:px-0">
         <p className="text-center sm:text-left">{siteDescription}</p>
       </div>
-      <div className="container mx-auto flex flex-col items-center gap-10 mt-10 mb-5 px-2 sm:flex-row sm:px-0">
+      <div className="container mx-auto flex flex-wrap mt-10 mb-5 px-4 sm:px-0">
         {data.map((item) => (
-          <Card
+          <div
             key={item.id}
-            imageUrl={item.organization.avatar_url}
-            title={item.organization.login}
-            description={item.description}
-            redirectUrl={`${item.organization.login}`}
-          />
+            className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 flex justify-center p-2"
+          >
+            <Card
+              imageUrl={item.organization.avatar_url}
+              title={item.organization.login}
+              description={item.description}
+              redirectUrl={`${item.organization.login}`}
+            />
+          </div>
         ))}
       </div>
     </div>

@@ -7,6 +7,7 @@ import { getIssuesById } from "../service/issuesData";
 import { formatDate } from "../utils";
 import { LinkButton } from "../components/LinkButton";
 import { IoArrowBack } from "react-icons/io5";
+import { Loading } from "../components/Loading";
 
 export const DetailsPage = () => {
   const { id } = useParams();
@@ -14,7 +15,9 @@ export const DetailsPage = () => {
   const { pathname } = location;
   const path = pathname.split("/")[1];
   const fetchFunction = useCallback(() => getIssuesById(path, id!), [id, path]);
-  const { data } = useFetch(fetchFunction);
+  const { data, isLoading } = useFetch(fetchFunction);
+
+  if (isLoading) return <Loading />;
 
   return (
     <div className="p-8 min-h-screen sm:container mx-auto sm:p-0 sm:my-8">
