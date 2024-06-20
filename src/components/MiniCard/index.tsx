@@ -20,12 +20,12 @@ export const MiniCard = ({
   return (
     <Link
       to={linkUrl!}
-      className="w-full min-h-28 bg-primary p-4 rounded-lg hover:opacity-70 duration-150 cursor-pointer"
+      className="w-full min-h-28 bg-lightGray border-2 border-border p-4 rounded-lg hover:opacity-70 duration-150 cursor-pointer"
     >
       <div className="flex flex-col justify-between h-full">
         <div>
           <p className="font-semibold text-lg">{title}</p>
-          <div className="flex flex-wrap gap-2 mt-1">
+          <div className="flex-wrap gap-2 mt-1 hidden sm:flex">
             {badges?.map((item) => (
               <span
                 key={item.id}

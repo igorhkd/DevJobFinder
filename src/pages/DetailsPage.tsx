@@ -28,7 +28,7 @@ export const DetailsPage = () => {
         </LinkButton>
       </div>
       <div className="border-b-2 border-black mb-2 pb-2">
-        <h1 className="font-bold text-2xl mb-2">{data?.title}</h1>
+        <h1 className="font-bold text-2xl mb-2 text-link">{data?.title}</h1>
         <p className="font-medium mb-2 text-black opacity-85">
           {formatDate(data?.created_at)}
         </p>

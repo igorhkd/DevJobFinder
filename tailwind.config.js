@@ -4,9 +4,11 @@ export default {
   theme: {
     extend: {
       colors: {
-        primary: "#F1F5F9",
+        primary: "#24252a",
         secondary: "#1F2937",
         link: "#0080FF",
+        border: "#F0F0F0",
+        lightGray: "#F5F5F5",
       },
     },
   },
