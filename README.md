@@ -1,5 +1,5 @@
-[TYPESCRIPT__BADGE]: https://img.shields.io/badge/typescript-D4FAFF?style=for-the-badge&logo=typescript
-[REACT__BADGE]: https://img.shields.io/badge/React-005CFE?style=for-the-badge&logo=react
+[TYPESCRIPT__BADGE]: https://img.shields.io/badge/typescript-000?style=for-the-badge&logo=typescript
+[REACT__BADGE]: https://img.shields.io/badge/React-000?style=for-the-badge&logo=react
 [TAILWIND__BADGE]: https://img.shields.io/badge/Tailwind%20Css-000?style=for-the-badge&logo=tailwindcss
 [VITE__BADGE]: https://img.shields.io/badge/Vite-000?style=for-the-badge&logo=vite
 [PROJECT__BADGE]: https://img.shields.io/badge/📱Visite_o_projeto-000?style=for-the-badge&logo=project
@@ -28,7 +28,9 @@
 
 <h2 id="about">📌 Sobre</h2>
 
-Este projeto é uma plataforma para encontrar oportunidades de emprego relacionadas a desenvolvimento. Coletamos informações de repositórios do GitHub para oferecer uma lista de oportunidades de trabalho para desenvolvedores front-end e back-end.
+Este projeto é uma plataforma para encontrar oportunidades de emprego relacionadas a desenvolvimento.
+
+Coletamos informações de repositórios do GitHub para oferecer uma lista de oportunidades de trabalho para desenvolvedores front-end e back-end.
 
 [![project][PROJECT__BADGE]][PROJECT__URL]
 
@@ -38,10 +40,10 @@ Este projeto é uma plataforma para encontrar oportunidades de emprego relaciona
 
 - [NodeJS](https://nodejs.org/en)
 
-<h3>Clonagem</h3>
+<h3>Clonando</h3>
 
 ```bash
-git clone https://github.com/igorhkd/DevJobFinder
+git clone https://github.com/igorhkd/DevJobFinder.git
 ```
 
 <h3>Iniciando</h3>
