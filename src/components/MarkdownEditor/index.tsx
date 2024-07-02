@@ -1,8 +1,8 @@
-import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
+import ReactMarkdown from "react-markdown";
 import "./style.css";
 
-type MarkdownEditorProps = {
+export type MarkdownEditorProps = {
   children?: string;
 };
 export const MarkdownEditor = ({ children }: MarkdownEditorProps) => {

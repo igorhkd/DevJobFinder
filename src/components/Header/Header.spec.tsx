@@ -3,7 +3,7 @@ import { BrowserRouter } from "react-router-dom";
 import { Header } from ".";
 
 describe("Header Component", () => {
-  it("renders Header component with default title", () => {
+  it("should render Header component with default title", () => {
     const { container } = render(
       <BrowserRouter>
         <Header />
@@ -14,7 +14,7 @@ describe("Header Component", () => {
     expect(linkElement).toBeInTheDocument();
   });
 
-  it("renders Header component with given title", () => {
+  it("should render Header component with given title", () => {
     const title = "Test Title";
     const { getByText } = render(
       <BrowserRouter>
