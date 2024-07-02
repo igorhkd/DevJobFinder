@@ -1,7 +1,9 @@
-[TYPESCRIPT__BADGE]: https://img.shields.io/badge/typescript-000?style=for-the-badge&logo=typescript
-[REACT__BADGE]: https://img.shields.io/badge/React-000?style=for-the-badge&logo=react
-[TAILWIND__BADGE]: https://img.shields.io/badge/Tailwind%20Css-000?style=for-the-badge&logo=tailwindcss
-[VITE__BADGE]: https://img.shields.io/badge/Vite-000?style=for-the-badge&logo=vite
+[TYPESCRIPT__BADGE]: https://img.shields.io/badge/typescript-007ACC?style=for-the-badge&logo=typescript&logoColor=white
+[REACT__BADGE]: https://img.shields.io/badge/React-00D8FF?style=for-the-badge&logo=react&logoColor=white
+[TAILWIND__BADGE]: https://img.shields.io/badge/tailwind%20Css-06b6d4?style=for-the-badge&logo=tailwindcss&logoColor=white
+[VITE__BADGE]: https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white&label
+[JEST__BADGE]: https://img.shields.io/badge/Jest-C21325?style=for-the-badge&logo=jest&logoColor=white
+[STORYBOOK__BADGE]: https://img.shields.io/badge/Storybook-FF4785?style=for-the-badge&logo=storybook&logoColor=white
 [PROJECT__BADGE]: https://img.shields.io/badge/📱Visite_o_projeto-000?style=for-the-badge&logo=project
 [PROJECT__URL]: https://developer-job-finder.vercel.app/
 
@@ -12,6 +14,8 @@
 ![typescript][TYPESCRIPT__BADGE]
 ![react][REACT__BADGE]
 ![tailwind][TAILWIND__BADGE]
+![Jest][JEST__BADGE]
+![Storybook][Storybook__BADGE]
 ![vite][VITE__BADGE]
 
 </div>
