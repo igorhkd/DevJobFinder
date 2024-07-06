@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-type HeaderProps = {
+export type HeaderProps = {
   title?: string;
 };
 
