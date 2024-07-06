@@ -56,6 +56,18 @@ git clone https://github.com/igorhkd/DevJobFinder.git
 cd DevJobFinder
 npm install
 npm run dev
+
+http://localhost:5173/
+```
+
+<h3>Storybook</h3>
+
+```bash
+cd DevJobFinder
+npm install
+npm run storybook
+
+http://localhost:6006/
 ```
 
 <h2 id="colab">🤝 Colaboradores</h2>
